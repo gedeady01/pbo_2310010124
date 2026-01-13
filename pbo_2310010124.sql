@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 11, 2025 at 05:53 AM
+-- Generation Time: Jan 13, 2026 at 07:37 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -100,7 +100,8 @@ INSERT INTO `program_bantuan` (`id_program`, `nama_program`, `jenis_bantuan`, `t
 (1, 'Bantuan Pangan Non Tunai (BPNT)', 'Pangan', '2025-01-01', '2025-12-31', 1),
 (2, 'Program Indonesia Pintar (PIP)', 'Pendidikan', '2025-02-01', '2025-11-30', 2),
 (4, 'Bantuan Stimulan Perumahan Swadaya (BSPS)', 'Perumahan', '2025-04-15', '2025-09-30', 4),
-(5, 'BLT Dampak Inflasi', 'Tunai', '2025-01-15', '2025-03-31', 5);
+(5, 'BLT Dampak Inflasi', 'Tunai', '2025-01-15', '2025-03-31', 5),
+(7, 'Bantuan Pendidikan Anak', 'Pendidikan', '2026-01-12', '2026-01-20', 1);
 
 -- --------------------------------------------------------
 
@@ -120,7 +121,7 @@ CREATE TABLE `wilayah` (
 --
 
 INSERT INTO `wilayah` (`id_wilayah`, `nama_kecamatan`, `nama_kelurahan`, `kode_pos`) VALUES
-(1, 'Medan Tuntungan', 'Sidomulyo', 'Sidomulyo'),
+(1, 'Medan Tuntungan', 'Sidomulyo', '20135'),
 (2, 'Medan Amplas', 'Harjosari II', '20148'),
 (3, 'Medan Marelan', 'Rengas Pulau', '20255'),
 (4, 'Binjai Timur', 'Tanah Tinggi', '20731'),
@@ -176,19 +177,19 @@ ALTER TABLE `data_penerima`
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `program_bantuan`
 --
 ALTER TABLE `program_bantuan`
-  MODIFY `id_program` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_program` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `wilayah`
 --
 ALTER TABLE `wilayah`
-  MODIFY `id_wilayah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_wilayah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables
