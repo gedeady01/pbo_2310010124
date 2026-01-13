@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="13474c98-39bc-4d29-8181-73d6f4ab3ba9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT id_program, nama_program, jenis_bantuan, tanggal_mulai, tanggal_selesai, id_kategori FROM program_bantuan]]>
+	</queryString>
+	<field name="id_program" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_program" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_bantuan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_mulai" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_selesai" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_kategori" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="nama_program">
+		<groupExpression><![CDATA[$F{nama_program}]]></groupExpression>
+	</group>
+	<group name="jenis_bantuan">
+		<groupExpression><![CDATA[$F{jenis_bantuan}]]></groupExpression>
+	</group>
+	<group name="tanggal_mulai">
+		<groupExpression><![CDATA[$F{tanggal_mulai}]]></groupExpression>
+	</group>
+	<group name="tanggal_selesai">
+		<groupExpression><![CDATA[$F{tanggal_selesai}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="149" y="27" width="272" height="31" uuid="1b9071ac-10bb-4893-884e-1110585f33ba"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA PROGRAM BANTUAN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="21" width="58" height="20" uuid="fa249d34-6566-480a-8d2f-9812fdef83d4"/>
+				<text><![CDATA[id_program]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="68" y="21" width="100" height="20" uuid="8ef13604-eb6d-4c8c-9fee-b17d8f11f790"/>
+				<text><![CDATA[nama_program]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="21" width="86" height="20" uuid="ccc65db9-9bd1-4c4e-8af3-16250751fb15"/>
+				<text><![CDATA[jenis_bantuan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="21" width="100" height="20" uuid="eaf47c1f-07a2-4ff9-9fb3-1e94c754f90a"/>
+				<text><![CDATA[tanggal_mulai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="388" y="21" width="100" height="20" uuid="0d496a72-0da0-413c-8034-ecdab0150c72"/>
+				<text><![CDATA[tanggal_selesai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="499" y="21" width="56" height="20" uuid="7114e48a-419e-4490-80a3-a5eac97613ba"/>
+				<text><![CDATA[id_kategori]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="42" width="58" height="20" uuid="af8fa0e4-2c45-459a-8802-b3640884b802"/>
+				<textFieldExpression><![CDATA[$F{id_program}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="68" y="42" width="100" height="20" uuid="48bf8745-08c3-4f8c-afde-78d8c65e9d20"/>
+				<textFieldExpression><![CDATA[$F{nama_program}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="42" width="86" height="20" uuid="4284ce9e-5f08-4187-ba1f-e1f0ed970ee7"/>
+				<textFieldExpression><![CDATA[$F{jenis_bantuan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="277" y="42" width="100" height="20" uuid="7c3f78c9-c9e7-4654-8bd5-d94ac17b6031"/>
+				<textFieldExpression><![CDATA[$F{tanggal_mulai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="388" y="42" width="100" height="20" uuid="1ea4fefd-64a5-4ad5-a2ea-b65e71f1e0c4"/>
+				<textFieldExpression><![CDATA[$F{tanggal_selesai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="499" y="42" width="56" height="20" uuid="10c56685-afc7-4112-b391-107dc443ec72"/>
+				<textFieldExpression><![CDATA[$F{id_kategori}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

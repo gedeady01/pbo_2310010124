@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="71de8253-a19f-4df6-8285-de24e2e5723d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT id_wilayah, nama_kecamatan, nama_kelurahan, kode_pos FROM wilayah]]>
+	</queryString>
+	<field name="id_wilayah" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_kecamatan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_kelurahan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kode_pos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="id_wilayah">
+		<groupExpression><![CDATA[$F{id_wilayah}]]></groupExpression>
+	</group>
+	<group name="nama_kecamatan">
+		<groupExpression><![CDATA[$F{nama_kecamatan}]]></groupExpression>
+	</group>
+	<group name="nama_kelurahan">
+		<groupExpression><![CDATA[$F{nama_kelurahan}]]></groupExpression>
+	</group>
+	<group name="kode_pos">
+		<groupExpression><![CDATA[$F{kode_pos}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="149" y="31" width="253" height="29" uuid="7f8da115-7e78-46ef-92b7-28f75cdcd7b9"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA WILAYAH]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="35" y="20" width="100" height="20" uuid="c3767d24-1a7f-43a2-92af-e61d5d47a952"/>
+				<text><![CDATA[id_wilayah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="20" width="100" height="20" uuid="4bfacced-ed7b-4b3b-a64d-4da8cc742bb6"/>
+				<text><![CDATA[nama_kecamatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="20" width="100" height="20" uuid="f22a7dfa-bc08-46b4-ac59-68b0ae560c68"/>
+				<text><![CDATA[nama_kelurahan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="402" y="20" width="100" height="20" uuid="bab660d8-8d1a-4aa2-b5fa-de385d119d20"/>
+				<text><![CDATA[kode_pos]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="35" y="33" width="100" height="20" uuid="8c41696a-b795-4693-a053-694b27fec5b5"/>
+				<textFieldExpression><![CDATA[$F{id_wilayah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="33" width="100" height="20" uuid="b65d8b2f-a204-4550-9fe0-8f3b6c7b6c32"/>
+				<textFieldExpression><![CDATA[$F{nama_kecamatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="33" width="100" height="20" uuid="80b0b1dc-e0ff-4998-9900-116a57872058"/>
+				<textFieldExpression><![CDATA[$F{nama_kelurahan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="33" width="100" height="20" uuid="04d337a5-a5de-433b-821b-6b3dcb39d677"/>
+				<textFieldExpression><![CDATA[$F{kode_pos}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

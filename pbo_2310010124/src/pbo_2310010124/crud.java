@@ -4,9 +4,21 @@
  */
 package pbo_2310010124;
 
+import java.io.File;
 import javax.swing.*;
 import java.sql.*;
 import javax.swing.table.DefaultTableModel;
+import net.sf.jasperreports.engine.JREmptyDataSource;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.design.JRDesignQuery;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import net.sf.jasperreports.view.JRDesignViewer;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -345,6 +357,21 @@ public void hapusWilayahPRT(String id_wilayah){
         JOptionPane.showMessageDialog(null, "Data Berhasil dihapus!");
     } catch (Exception e) {
         JOptionPane.showMessageDialog(null, e.getMessage());
+    }
+}
+
+public void cetakLaporan(String fileLaporan, String sql){
+    try {
+        File laporan = new File(fileLaporan);
+        JasperDesign designLaporan = JRXmlLoader.load(laporan);
+        JRDesignQuery queryLaporan = new JRDesignQuery();
+        queryLaporan.setText(sql);
+        designLaporan.setQuery(queryLaporan);
+        JasperReport objekLaporan = JasperCompileManager.compileReport(designLaporan);
+        JasperPrint objekPrint = JasperFillManager.fillReport(objekLaporan, null, this.koneksiDB);
+        JasperViewer.viewReport(objekPrint, false);
+
+    } catch (Exception e) {
     }
 }
 
